@@ -10,4 +10,4 @@ Save_Period = 5
 
 myRoom = Room(Num_People, Init_Money, Ex_Money)
 myRoom.goRun(Game_Round, Save_Period=Save_Period)
-myRoom.save()
+myRoom.save('./display/data.json')

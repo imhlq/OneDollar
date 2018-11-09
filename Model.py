@@ -36,6 +36,6 @@ class Room:
             self.exchange()
 
     
-    def save(self):
-        with open('data.json', 'w') as fp:
+    def save(self, filename):
+        with open(filename, 'w') as fp:
             json.dump(self.lines, fp)

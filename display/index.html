@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wealth Distribution</title>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        var margin = {top: 50, bottom: 10, left:300, right: 40};
+        var svg = d3.select('body').append('svg')
+                    .attr('width', 800)
+        var g = svg.append("g")
+                    .attr("transform", "translate("+margin.left+","+margin.top+")");
+
+        const data = await d3.json("data.json");
+        console.log(data);
+
+        var xAxis = d3.svg.axis();
+
+    </script>
+</body>
+</html>
