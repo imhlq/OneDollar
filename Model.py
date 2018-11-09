@@ -28,10 +28,11 @@ class Room:
     def moneyList(self):
         return [p.money for p in self.member]
 
-    def goRun(self, n):
+    def goRun(self, n, Save_Period = 1):
         self.lines = {}
         for i in range(n):
-            self.lines[i] = self.moneyList()
+            if i % Save_Period == 0:
+                self.lines[i] = self.moneyList()
             self.exchange()
 
     
