@@ -16,10 +16,14 @@
         var g = svg.append("g")
                     .attr("transform", "translate("+margin.left+","+margin.top+")");
 
-        const data = await d3.json("data.json");
-        console.log(data);
+        async function loadData() {
+            const data = await d3.json("data.json");
+            console.log(data);   
+        }
 
-        var xAxis = d3.svg.axis();
+        var xAxis = d3.svg.axis;
+        
+        loadData();
 
     </script>
 </body>
